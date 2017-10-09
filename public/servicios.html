@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Posadas Chat</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/benefit.css">
+    <link rel="stylesheet" href="/stylesheets/ana.css">
+    
+    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="homePage" onload="getBenefits();">
+
+<div class="healthContainer">
+
+<header>
+    <div class="banner">
+        <div class="titleArea">
+            <div class="logo"><img class="logoImage" src="images/wash/cloud.svg"></div>
+            <div class="name"><a class="home" href="https://posadaschat-agente-unbristled-octaroon.mybluemix.net/servicios">PosadasChat</a></div>
+        </div>
+        <div class="loginArea">
+            <div class="menu"><a class="menulink" href="src/manual.pdf">Acerca</a></div>
+            <div id="login" class="menu"><a class="menulink" href="./login">Log In</a></div>
+            <div id="logout" class="menu"><a class="menulink" href="./logout">Logout</a></div>
+            <div id="status "></div>
+        </div>
+        
+    </div>
+</header>
+
+<!-- Se inicia con chat -->
+<!-- <section class="healthLayout"> -->
+<div class="containerPanelChatCenter">
+<div class="containerPanelChat">
+  <div class='containerPanel'>
+
+    <div class = "anaBanner">
+      <span><img src="images/chat.svg" style="width: 25px;height: 25px;color:#fff"></span> Chat
+            <div class="btn-group pull-right">
+                <a type="button" id='btnCollapseOne' data-parent="#accordion" href="#collapseOne">
+                    <!-- <a type="button" data-toggle="collapse" id='btnCollapseOne' data-parent="#accordion" href="#collapseOne"> -->
+                  <table>
+                    <td><a href="./logout"><img class="xShow" src="images/Cerrar_MABE.jpg">
+                        </a>
+                    </td>
+                  </table>
+                </a>
+             </div>
+      </div>
+    <div id="chatBox" class="dialogcontainer"></div>
+    <div class="row">
+      <img id="Mabe01" src="../images/grupo-posadas.jpg">
+        <input type="text" id="chatMessage" class="dialoginput form-control input-sm" placeholder="En que te puedo ayudar... " onkeypress="return newEvent(event)">
+      <button id="converChat" class="envviarbut" onclick="enviaPanel();"> Enviar </button>                          
+    </div>
+  </div>
+<!-- </section> -->
+</div>
+</div>
+</div>
+<!-- Se inicia con modal para Paises-->
+<div id="mod" class="modal" data-backdrop="static"> 
+<table class="idioma">
+
+<tr><td colspan="2">
+
+<h1 class="hidi"> PosadasChat. </h1></td></tr>
+<tr>
+<td td colspan="2" class="htext">Welcome to Posadashat, please choose the language of your preference.<td>
+</tr><tr>
+<td><button id="" class="mex" data-dismiss="modal" onclick="enviaPanelMex();">  </button></td>
+<td><button id="" class="us" data-dismiss="modal" onclick="enviaPanelUs();">  </button></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript">
+  
+  /*   $(window).on('load',function(){
+        $('#mod').modal('show');
+    });
+ /*  function closeIdioms(){
+    $('#mod').modal('hide');
+   }*/  
+</script>
+
+
+
+    
+
+</body>
+<script src="src/cloudco.js"></script>
+<script src="src/ana.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+</html>

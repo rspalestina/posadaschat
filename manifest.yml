@@ -1,0 +1,19 @@
+
+declared-services:
+  Cloudant-Posadas:
+    label: Cloudant NoSQL DB
+    plan: Lite
+  ConversationStd:
+    label: conversation
+    plan: Standard
+applications:
+- name: posadaschat_agente
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - ConversationStd
+  - Cloudant-Posadas
+  env:
+    NPM_CONFIG_PRODUCTION: false
